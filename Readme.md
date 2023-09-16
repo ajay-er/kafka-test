@@ -1,3 +1,4 @@
+- Install Docker 
 - Start Zookeper Container and expose PORT `2181`.
 ```bash
 docker run -p 2181:2181 zookeeper
@@ -9,5 +10,12 @@ docker run -p 9092:9092 \
 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://<PRIVATE_IP>:9092 \
 -e KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1 \
 confluentinc/cp-kafka
+```
+
+- Open Project in VS code and run
+```bash
+node admin.js
+node producer.js
+node consumer.js
 ```
 
